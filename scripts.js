@@ -77,3 +77,10 @@ document.addEventListener('DOMContentLoaded', function(){
     if(e.key === 'Escape' && mobileMenu){ mobileBtn && mobileBtn.setAttribute('aria-expanded','false'); mobileMenu.setAttribute('aria-hidden','true'); }
   });
 });
+// Bubble cursor movement
+const bubble = document.querySelector('.bubble-cursor');
+
+document.addEventListener('mousemove', (e) => {
+  bubble.style.left = e.clientX + 'px';
+  bubble.style.top = e.clientY + 'px';
+});
