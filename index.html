@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>M.S.F SAHRA — Biomedical Technology Student</title>
+  <!-- Short one-line prompt: “Design a responsive personal portfolio website using HTML, CSS, and JavaScript for a Biomedical Technology student with a clean, modern, medical-themed layout.” -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#maincontent">Skip to content</a>
+  <!-- Site header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">M.S.F SAHRA</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <button id="darkToggle" class="btn icon" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <button id="downloadResume" class="btn primary">Resume</button>
+        <button class="btn menu" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+      </div>
+    </div>
+    <!-- Mobile nav (hidden on desktop) -->
+    <nav id="mobileMenu" class="mobile-nav" aria-hidden="true">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <!-- Home / Hero -->
+    <section id="home" class="hero section">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <h1 class="name">M.S.F SAHRA</h1>
+          <p class="title">Biomedical Technology Student</p>
+          <p class="tagline">Bringing science, care and innovation together — focused on medical solutions and community wellness.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#contact" class="btn outline">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-photo reveal">
+          <div class="photo-frame" aria-label="Profile photo of M.S.F SAHRA">
+            <img src="https://t4.ftcdn.net/jpg/06/38/71/61/360_F_638716104_ZaLUjHLnqDh5N8s8H4diKZLaAeB7qquq.jpg" alt="Profile photo of M.S.F SAHRA" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container section-inner">
+        <h2 class="section-title">About Me</h2>
+        <p class="lead reveal">Hello — I'm <strong>M.S.F SAHRA</strong>, a Biomedical Technology student at the <em>Gampaha Wickramarachchi University of Indigenous Medicine</em>. I am passionate about medical devices, diagnostics, and applying interdisciplinary methods to improve patient outcomes. I enjoy public speaking and community education as a motivational speaker.</p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section bg-soft reveal">
+      <div class="container section-inner">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+          <h3>B.Sc. (Hons) in Biomedical Technology</h3>
+          <p><strong>University:</strong> Gampaha Wickramarachchi University of Indigenous Medicine</p>
+          <p><strong>Date of birth:</strong> 26.10.2003</p>
+          <p><strong>Location:</strong> Sri Lanka</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container section-inner">
+        <h2 class="section-title">Skills</h2>
+        <ul class="skill-grid reveal">
+          <li>Biomedical instrumentation</li>
+          <li>Laboratory techniques</li>
+          <li>Data analysis &amp; basic statistics</li>
+          <li>Technical troubleshooting</li>
+          <li>Computer: MS Office, basic Python, data entry</li>
+          <li><strong>MOTIVATIONAL SPEAKER</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section bg-soft">
+      <div class="container section-inner">
+        <h2 class="section-title">Projects</h2>
+        <p class="muted">Academic and mini project placeholders — replace with your real projects when ready.</p>
+        <div class="projects-grid reveal">
+          <article class="project-card">
+            <h3>Mini Project 1</h3>
+            <p>Designing a low-cost diagnostic tool for basic health screenings.</p>
+            <a class="btn outline small" href="#" onclick="projectAlert('Mini Project 1')">Learn more</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Mini Project 2</h3>
+            <p>Lab-based project on sample preparation and analysis techniques.</p>
+            <a class="btn outline small" href="#" onclick="projectAlert('Mini Project 2')">Learn more</a>
+          </article>
+
+          <article class="project-card">
+            <h3>Project 3</h3>
+            <p>Community outreach on health education and preventive practices.</p>
+            <a class="btn outline small" href="#" onclick="projectAlert('Project 3')">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container section-inner">
+        <h2 class="section-title">Contact</h2>
+        <p class="lead">Email: <a href="mailto:msf.sahra@example.com">msf.sahra@example.com</a></p>
+        <p>Location: Sri Lanka</p>
+        <button id="contactBtn" class="btn primary">Send a message</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> M.S.F SAHRA — Biomedical Technology Student.</p>
+      <div class="social">Made with care ⚕️</div>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

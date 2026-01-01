@@ -1,0 +1,121 @@
+/* styles.css - Clean, medical-themed styling for M.S.F SAHRA portfolio */
+:root{
+  --bg: #ffffff;
+  --surface: #f7fbfb;
+  --muted: #6b7280;
+  --accent: #2a9df4; /* soft blue */
+  --accent-2: #3dbf9f; /* soft green */
+  --text: #0f172a;
+  --radius: 10px;
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* Skip link (a11y) */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:0;
+  background:var(--accent);
+  color:white;
+  padding:0.5rem 0.75rem;
+  border-radius:6px;
+  z-index:100;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  transition:left .18s ease, top .18s ease;
+}
+
+/* Dark theme variables */
+body.dark{
+  --bg: #071025;
+  --surface: #07263a;
+  --muted: #93a3b4;
+  --text: #e6eef8;
+  --glass: rgba(255,255,255,0.04);
+}
+
+/* Mobile-first base */
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin:0;background:var(--bg);color:var(--text);
+  -webkit-font-smoothing:antialiased;line-height:1.5;scroll-behavior:smooth;
+}
+.container{max-width:1100px;margin:0 auto;padding:1.25rem;}
+.section{padding:3rem 0}
+.bg-soft{background:linear-gradient(180deg, var(--surface), transparent);}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:40;background:var(--glass);backdrop-filter:blur(4px);border-bottom:1px solid rgba(0,0,0,0.04)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{font-weight:700;color:var(--text);text-decoration:none}
+.main-nav{display:none}
+.main-nav .nav-link{margin-left:0.75rem;color:var(--muted);text-decoration:none}
+.header-controls{display:flex;gap:0.5rem;align-items:center}
+.btn{padding:0.55rem 0.9rem;border-radius:8px;border:1px solid transparent;background:transparent;cursor:pointer;font-weight:600}
+.btn.icon{padding:0.45rem}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border-color:transparent}
+.btn.outline{border:1px solid rgba(0,0,0,0.06)}
+.btn.small{padding:0.33rem 0.6rem}
+.btn.menu{display:inline-block}
+.btn:hover{transform:translateY(-2px);transition:transform .18s ease}
+
+/* Hero */
+.hero-inner{display:grid;grid-template-columns:1fr;gap:1.25rem;align-items:center}
+.hero-text .name{font-size:1.6rem;margin:0}
+.title{color:var(--accent-2);font-weight:700;margin:0.25rem 0}
+.tagline{color:var(--muted);margin:0.6rem 0}
+.hero-photo{display:flex;justify-content:center}
+.photo-frame{width:160px;height:160px;border-radius:50%;background:linear-gradient(180deg,var(--surface),#fff);display:flex;align-items:center;justify-content:center;border:4px solid rgba(255,255,255,0.2);box-shadow:0 8px 20px rgba(20,40,60,0.06);overflow:hidden}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.photo-placeholder{color:var(--muted);display:none}
+
+/* Sections */
+.section-title{font-size:1.15rem;margin-bottom:0.75rem}
+.lead{color:var(--muted);}
+.education-card{background:var(--bg);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,40,80,0.04)}
+.skill-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:0.5rem;list-style:none;padding:0;margin:0}
+.skill-grid li{padding:0.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.04)}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.project-card{background:var(--bg);padding:1rem;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
+.muted{color:var(--muted)}
+
+/* Footer */
+.site-footer{padding:1.25rem 0;border-top:1px solid rgba(0,0,0,0.04)}
+
+/* Reveal animations */
+.reveal{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
+.reveal.revealed{opacity:1;transform:none}
+
+/* Responsive / desktop */
+@media(min-width:760px){
+  .main-nav{display:flex}
+  .mobile-nav{display:none}
+  .hero-inner{grid-template-columns:1fr 320px}
+  .skill-grid{grid-template-columns:repeat(3,1fr)}
+  .projects-grid{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Dark mode hover adjustments */
+body.dark .btn.outline{border-color:rgba(255,255,255,0.06)}
+
+/* Accessibility focus states */
+a:focus, button:focus{outline:3px solid rgba(42,157,244,0.18);outline-offset:2px}
+
+/* Tiny utilities */
+.text-center{text-align:center}
+
+/* Smooth decorative micro animation for project card hover */
+.project-card:hover{transform:translateY(-6px);transition:transform .2s cubic-bezier(.2,.9,.3,1);box-shadow:0 12px 30px rgba(12,40,80,0.08)}
+
+/* mobile nav styles */
+.mobile-nav{display:none;background:var(--surface);padding:.75rem;border-top:1px solid rgba(0,0,0,0.03)}
+.mobile-nav .nav-link{display:block;padding:.5rem 0;color:var(--muted);text-decoration:none}
+
+/* small tweaks for smaller screens */
+@media(max-width:420px){
+  .photo-frame{width:120px;height:120px}
+}
